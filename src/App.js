@@ -24,20 +24,20 @@ function App() {
 	];
 
 	// Note: Under the hood Legacy React code
-	return React.createElement(
+	/*return React.createElement(
 		'div',
 		{},
 		React.createElement('h2', {}, "Let's get started!"),
 		React.createElement(Expenses, {items: expenses})
-		)
+		)*/
 
 	// note: JSX version
-	/*return (
+	return (
 		<div>
 			<h2>Let's get started!</h2>
 			<Expenses items={expenses}/>
 		</div>
-	);*/
+	);
 }
 
 export default App;

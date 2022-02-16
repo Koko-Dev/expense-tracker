@@ -23,6 +23,7 @@ function App() {
 		},
 	];
 
+	// Note: Under the hood Legacy React code
 	return React.createElement(
 		'div',
 		{},
@@ -30,6 +31,7 @@ function App() {
 		React.createElement(Expenses, {items: expenses})
 		)
 
+	// note: JSX version
 	/*return (
 		<div>
 			<h2>Let's get started!</h2>

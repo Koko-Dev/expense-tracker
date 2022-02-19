@@ -1,6 +1,8 @@
 import React from 'react';
-import './NewExpense.css'
-import ExpenseItem from "../Expenses/ExpenseItem";
+
+import ExpenseForm from './ExpenseForm';
+import './NewExpense.css';
+
 
 // Goal: return a form for our inputs. Form will be in other component
 const NewExpense = () => {

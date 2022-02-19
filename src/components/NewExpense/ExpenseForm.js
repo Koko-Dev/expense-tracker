@@ -21,19 +21,25 @@ const ExpenseForm = () => {
 	const titleChangeHandler = (event) => {
 		// setEnteredTitle(event.target.value);
 		setUserInput({
-			enteredTitle: event.target.value
+			enteredTitle: event.target.value,
+			enteredAmount: '',
+			enteredDate: ''
 		})
 	};
 	const amountChangeHandler = (event) => {
 		// setEnteredAmount(event.target.value);
 		setUserInput({
-			enteredAmount: event.target.value
+			enteredAmount: event.target.value,
+			enteredTitle: '',
+			enteredDate: ''
 		})
 	};
 	const dateChangeHandler = (event) => {
 		// setEnteredDate(event.target.value);
 		setUserInput({
-			enteredDate: event.target.value
+			enteredDate: event.target.value,
+			enteredAmount: '',
+			enteredTitle: ''
 		})
 	};
 

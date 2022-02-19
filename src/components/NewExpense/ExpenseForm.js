@@ -4,9 +4,13 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
+	// Important: Store State => The second variable is a function which
+	//  will store user entry in our state; this is done in event handler
+	//  where the user input becomes the argument for setEntered___
 	const [enteredTitle, setEnteredTitle] = useState('');
 	const [enteredAmount, setEnteredAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
+	// console.log(enteredTitle, enteredAmount, enteredDate);
 
 	const titleChangeHandler = (event) => {
 		setEnteredTitle(event.target.value);

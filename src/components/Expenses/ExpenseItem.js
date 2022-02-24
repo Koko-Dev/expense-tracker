@@ -4,6 +4,11 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
+	// useState is a REACT Hook
+	// All REACT hooks start with "use"
+	// All REACT hooks must be called within a REACT component function
+	// With few exceptions, REACT hooks should not be called
+	//      within nested functions
 	const [title, setTitle] = useState(props.title);
 
 	// Note: This will be called whenever the ExpenseItem Component

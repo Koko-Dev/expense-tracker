@@ -25,13 +25,11 @@ const ExpenseForm = () => {
 			enteredAmount: '',
 			enteredDate: ''
 		})*/
-
 		// alternate 3 -- NOT RECOMMENDED
 		/*setUserInput({
 			...userInput,
 			enteredTitle: event.target.value
 		})*/
-
 		// NOTE:  alternative to 3
 		// alternate 4
 		// Important:  Whenever you update state and you depend on the previous state,
@@ -49,14 +47,12 @@ const ExpenseForm = () => {
 
 	const amountChangeHandler = (event) => {
 		setEnteredAmount(event.target.value);
-
 		// alternate 2
 		/*setUserInput({
 			enteredAmount: event.target.value,
 			enteredTitle: '',
 			enteredDate: ''
 		})*/
-
 		// alternate 3 -- NOT RECOMMENDED
 		/*setUserInput({
 			...userInput,
@@ -72,7 +68,6 @@ const ExpenseForm = () => {
 			enteredAmount: '',
 			enteredTitle: ''
 		})*/
-
 		// alternate 3 -- NOT RECOMMENDED
 		/*setUserInput({
 			...userInput,
@@ -82,26 +77,16 @@ const ExpenseForm = () => {
 
 	const submitHandler = (event) => {
 		event.preventDefault();
-
 		const expenseData = {
 			title: enteredTitle,
 			amount: enteredAmount,
 			date: new Date(enteredDate)
 		}
-
-		/* output:
-		 {
-		    title: 'Apple',
-		    amount: '125.75',
-		    date: Thu Feb 17 2022 19:00:00 GMT-0500 (Eastern Standard Time)
-	    }
-		 amount: "125.75"
-		 date: Thu Feb 17 2022 19:00:00 GMT-0500 (Eastern Standard Time) {}
-		 title: "Apple"
-		 [[Prototype]]: Object */
-		console.log(expenseData);
-
-
+		// todo: set back to empty string (i.e. Reset all inputs)
+		// note: This overrides user input and clears the form
+		setEnteredTitle('');
+		setEnteredAmount('');
+		setEnteredDate('');
 	}
 
 	return (
@@ -110,6 +95,7 @@ const ExpenseForm = () => {
 				<div className='new-expense__control'>
 					<label>Title</label>
 					<input
+						value={enteredTitle}
 						type='text'
 						onChange={titleChangeHandler}
 					/>
@@ -117,6 +103,7 @@ const ExpenseForm = () => {
 				<div className='new-expense__control'>
 					<label>Amount</label>
 					<input
+						value={enteredAmount}
 						type='number'
 						min='0.01'
 						step='0.01'
@@ -126,6 +113,7 @@ const ExpenseForm = () => {
 				<div className='new-expense__control'>
 					<label>Date</label>
 					<input
+						value={enteredDate}
 						type='date'
 						min='2020-01-01'
 						max='2023-12-31'

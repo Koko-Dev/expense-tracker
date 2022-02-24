@@ -28,7 +28,10 @@ const ExpenseItem = (props) => {
 	//  because a new useState is being called for reevaluation
 	console.log('ExpenseItem evaluated by React');
 
+	// todo: Create a handler which updates title when button is clicked
 	const clickHandler = () => {
+		// Important: When setTitle() is called here to , the entire ExpenseItem component
+		//  is executed again and will comprehensively update any changes
 		setTitle('Updated');
 		console.log(title);
 	}

@@ -6,10 +6,11 @@ const ExpenseForm = () => {
 	// Important: Store State => The second variable is a function which
 	//  will store user entry in our state; this is done in event handler
 	//  where the user input becomes the argument for setEntered___
-	// const [enteredTitle, setEnteredTitle] = useState('');
-	// const [enteredAmount, setEnteredAmount] = useState('');
-	// const [enteredDate, setEnteredDate] = useState('');
+	/*const [enteredTitle, setEnteredTitle] = useState('');
+	const [enteredAmount, setEnteredAmount] = useState('');
+	const [enteredDate, setEnteredDate] = useState('');*/
 
+	// alternate 2 and 3
 	const [userInput, setUserInput] = useState({
 		enteredTitle: '',
 		enteredAmount: '',
@@ -18,39 +19,51 @@ const ExpenseForm = () => {
 
 	const titleChangeHandler = (event) => {
 		// setEnteredTitle(event.target.value);
-		/*setUserInput({
+		// alternate 2
+		setUserInput({
 			enteredTitle: event.target.value,
 			enteredAmount: '',
 			enteredDate: ''
-		})*/
-		setUserInput({
+		})
+
+		// alternate 3
+		/*setUserInput({
 			...userInput,
 			enteredTitle: event.target.value
-		})
+		})*/
 	};
+
 	const amountChangeHandler = (event) => {
 		// setEnteredAmount(event.target.value);
-		/*setUserInput({
+
+		// alternate 2
+		setUserInput({
 			enteredAmount: event.target.value,
 			enteredTitle: '',
 			enteredDate: ''
-		})*/
-		setUserInput({
+		})
+
+		// alternate 3
+		/*setUserInput({
 			...userInput,
 			enteredAmount: event.target.value,
-		})
+		})*/
 	};
+
 	const dateChangeHandler = (event) => {
 		// setEnteredDate(event.target.value);
-		/*setUserInput({
+		// alternate 2
+		setUserInput({
 			enteredDate: event.target.value,
 			enteredAmount: '',
 			enteredTitle: ''
-		})*/
-		setUserInput({
+		})
+
+		// alternate 3
+		/*setUserInput({
 			...userInput,
 			enteredDate: event.target.value
-		})
+		})*/
 	};
 
 	return (

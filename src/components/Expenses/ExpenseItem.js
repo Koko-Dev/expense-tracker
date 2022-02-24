@@ -9,8 +9,16 @@ const ExpenseItem = (props) => {
 	// All REACT hooks must be called within a REACT component function
 	// With few exceptions, REACT hooks should not be called
 	//      within nested functions
-	const [title, setTitle] = useState(props.title);
 
+	// Note: useState() returns an Array where the first element
+	//    is the variable itself and the second element is a function
+	//    used to update that first variable.
+	// var title = the initial value of props.title
+	// var setTitle is the function when called can  update var title
+	// note:  As a convention we use 'set' to name function element;
+	//  in this case we are using useState to update
+	//  props.title, so we will name it setTitle
+	const [title, setTitle] = useState(props.title);
 	// Note: This will be called whenever the ExpenseItem Component
 	//  is being executed
 	// note: Upon npm start, this console log will be called 4 times.

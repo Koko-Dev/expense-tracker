@@ -18,6 +18,12 @@ const ExpenseItem = (props) => {
 	// note:  As a convention we use 'set' to name function element;
 	//  in this case we are using useState to update
 	//  props.title, so we will name it setTitle
+	// Important: We use const for useState returned Array elements because each
+	//  time ExpenseItem component is called it is only an instance.
+	//  Every time it is called a new separate state is created,
+	//  managed independently by REACT -- ON A PER COMPONENT INSTANCE BASIS
+	//  even if we create a component more than once. If this were not the case,
+	//  then all instances of props.title would change on setTitle update call.
 	const [title, setTitle] = useState(props.title);
 	// Note: This will be called whenever the ExpenseItem Component
 	//  is being executed

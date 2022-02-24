@@ -84,6 +84,8 @@ const ExpenseForm = () => {
 		}
 		// todo: set back to empty string (i.e. Reset all inputs)
 		// note: This overrides user input and clears the form
+		// important: When Add Expense button is clicked, all inputs
+		//  are then reset to empty string
 		setEnteredTitle('');
 		setEnteredAmount('');
 		setEnteredDate('');

@@ -80,8 +80,32 @@ const ExpenseForm = () => {
 		})*/
 	};
 
+	const submitHandler = (event) => {
+		event.preventDefault();
+
+		const expenseData = {
+			title: enteredTitle,
+			amount: enteredAmount,
+			date: new Date(enteredDate)
+		}
+
+		/* output:
+		 {
+		    title: 'Apple',
+		    amount: '125.75',
+		    date: Thu Feb 17 2022 19:00:00 GMT-0500 (Eastern Standard Time)
+	    }
+		 amount: "125.75"
+		 date: Thu Feb 17 2022 19:00:00 GMT-0500 (Eastern Standard Time) {}
+		 title: "Apple"
+		 [[Prototype]]: Object */
+		console.log(expenseData);
+
+
+	}
+
 	return (
-		<form>
+		<form onSubmit={submitHandler}>
 			<div className='new-expense__controls'>
 				<div className='new-expense__control'>
 					<label>Title</label>

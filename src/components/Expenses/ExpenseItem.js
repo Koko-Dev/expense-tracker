@@ -9,7 +9,7 @@ const ExpenseItem = (props) => {
 	// Note: This will be called whenever the ExpenseItem Component
 	//  is being executed
 	// note: Upon npm start, this console log will be called 4 times.
-	//  This is the case becasue ExpenseItem is being used four times
+	//  This is the case because ExpenseItem is being used four times
 	//  in Expenses.js.
 	// note: When the button is clicked, it will be called only once
 	//  because a new useState is being called for reevaluation

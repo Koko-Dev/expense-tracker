@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
+	// Note: Initialize each useState() with a string => useState('')
+	//  on each listener event.target.value will always
+	//  come back as a string, even if it is a number
 	// Important: Store State => The second variable is a function which
 	//  will store user entry in our state; this is done in event handler
 	//  where the user input becomes the argument for setEntered___

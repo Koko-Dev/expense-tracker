@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 	// Note: Initialize each useState() with a string => useState('')
 	//  on each listener event.target.value will always
 	//  come back as a string, even if it is a number
@@ -98,6 +98,23 @@ const ExpenseForm = () => {
 			amount: enteredAmount,
 			date: new Date(enteredDate)
 		}
+
+		// Note: Now, since we add (props) to ExpenseForm component
+		//  because we want to pass expenseData information to parent
+		//  (NewExpense component), we want to return that
+		//  data to the onSaveExpenseData listener we created in NewExpense
+		// Todo: Instead of submitHandler logging expenseData we want to
+		//   access props onSaveExpenseData and execute here.
+		// Important:  We can execute it because the value which
+		//  we get on onSaveExpenseData key will be a function since we
+		//  are passing in saveExpenseDataHandler function on NewExpense.js.
+		//  So, it is that saveExpenseDataHandler() function defined on the
+		//  NewExpense component which we will now execute in a different
+		//  component (ExpenseForm).  And we CAN execute the function even
+		//  though it is not defined in ExpenseForm component because we are
+		//  passing a pointer edit through the onSaveExpenseData prop.
+		props.onSaveExpenseData(expenseData);
+
 		// todo: set back to empty string (i.e. Reset all inputs)
 		// note: This overrides user input and clears the form
 		// important: When Add Expense button is clicked, all inputs

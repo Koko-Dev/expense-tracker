@@ -80,11 +80,16 @@ const ExpenseForm = () => {
 	};
 
 	// TODO: Listen for Form submission (onSubmit)
-	// Note: When a form a submitted it emits an onsubmit,
+	// Note: When a <form> a submitted it emits an onsubmit,
 	//  so instead of listening for an onc lick, it's better to
 	//  listen for the onsubmit --
 	//  in React, it is onClick and onSubmit, respectively
 	const submitHandler = (event) => {
+		// todo: preventDefault() on the event because when a form is
+		//  submitted tthe browser automatically sends a
+		//  request to the server, which is hosting this webpage,
+		//  for the page to reload.  That is NOT what we want because we
+		//  want to manually do something with this data.
 		event.preventDefault();
 		const expenseData = {
 			title: enteredTitle,

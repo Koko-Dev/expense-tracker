@@ -86,7 +86,7 @@ const ExpenseForm = () => {
 	//  in React, it is onClick and onSubmit, respectively
 	const submitHandler = (event) => {
 		// todo: preventDefault() on the event because when a form is
-		//  submitted tthe browser automatically sends a
+		//  submitted the browser automatically sends a
 		//  request to the server, which is hosting this webpage,
 		//  for the page to reload.  That is NOT what we want because we
 		//  want to manually do something with this data.

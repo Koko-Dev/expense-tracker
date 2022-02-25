@@ -91,6 +91,8 @@ const ExpenseForm = () => {
 		//  for the page to reload.  That is NOT what we want because we
 		//  want to manually do something with this data.
 		event.preventDefault();
+
+		// Todo:  Combine all entered data
 		const expenseData = {
 			title: enteredTitle,
 			amount: enteredAmount,

@@ -6,12 +6,14 @@ import './NewExpense.css';
 
 // Goal: return a form for our inputs.
 //  Form will be in ExpenseForm.js Component
-const NewExpense = () => {
+const NewExpense = (props) => {
 	const saveExpenseDataHandler = (enteredExpenseData) => {
 		const expenseData = {
 			...enteredExpenseData,
 			id: Math.random().toString()
 		};
+
+		props.onAddExpense(expenseData);
 
 		// output: {id: '0.07278843426987991'}
 		console.log(expenseData);

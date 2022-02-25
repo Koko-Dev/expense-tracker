@@ -79,7 +79,7 @@ const ExpenseForm = () => {
 		})*/
 	};
 
-	// TODO: Listen for Form submission (onSubmit)
+	// TODO: Listen for Form submission emitted event with (onSubmit)
 	// Note: When a <form> a submitted it emits an onsubmit,
 	//  so instead of listening for an onc lick, it's better to
 	//  listen for the onsubmit --

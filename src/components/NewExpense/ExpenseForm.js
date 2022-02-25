@@ -13,7 +13,7 @@ const ExpenseForm = () => {
 	const [enteredAmount, setEnteredAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
 
-	// alternate 2 and 3
+	// option 2 and 3
 	/*const [userInput, setUserInput] = useState({
 		enteredTitle: '',
 		enteredAmount: '',
@@ -21,20 +21,21 @@ const ExpenseForm = () => {
 	})*/
 
 	const titleChangeHandler = (event) => {
+		// todo: option 1
 		setEnteredTitle(event.target.value);
-		// alternate 2
+		// todo: option 2
 		/*setUserInput({
 			enteredTitle: event.target.value,
 			enteredAmount: '',
 			enteredDate: ''
 		})*/
-		// alternate 3 -- NOT RECOMMENDED
+		// todo: option 3 -- NOT RECOMMENDED
 		/*setUserInput({
 			...userInput,
 			enteredTitle: event.target.value
 		})*/
 		// NOTE:  alternative to 3
-		// alternate 4
+		// todo: option 4
 		// Important:  Whenever you update state and you depend on the previous state,
 		//  as in alternative 3 or when using a counter, you should use an alternative
 		//  form like so. This will receive the previous snapshot in argument prevState
@@ -50,13 +51,13 @@ const ExpenseForm = () => {
 
 	const amountChangeHandler = (event) => {
 		setEnteredAmount(event.target.value);
-		// alternate 2
+		// todo: option 2
 		/*setUserInput({
 			enteredAmount: event.target.value,
 			enteredTitle: '',
 			enteredDate: ''
 		})*/
-		// alternate 3 -- NOT RECOMMENDED
+		// todo: option 3 -- NOT RECOMMENDED
 		/*setUserInput({
 			...userInput,
 			enteredAmount: event.target.value,
@@ -65,13 +66,13 @@ const ExpenseForm = () => {
 
 	const dateChangeHandler = (event) => {
 		setEnteredDate(event.target.value);
-		// alternate 2
+		// todo: option 2
 		/*setUserInput({
 			enteredDate: event.target.value,
 			enteredAmount: '',
 			enteredTitle: ''
 		})*/
-		// alternate 3 -- NOT RECOMMENDED
+		// todo: option 3 -- NOT RECOMMENDED
 		/*setUserInput({
 			...userInput,
 			enteredDate: event.target.value
